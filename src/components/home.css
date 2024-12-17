@@ -1,0 +1,238 @@
+:root {
+  --theme-color: #17726d;
+  --background-color: #eae4d2;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    width:90%;
+    height:90%;
+}
+.header {
+    background-color: var(--background-color);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header img {
+    width: 50px;
+    height: 50px;
+}
+.header .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: var(--theme-color);
+}
+
+.header .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(23, 114, 109, 0.1);
+    border: 2px solid var(--theme-color);
+}
+.header .search-bar input {
+    width: 600px;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: var(--theme-color);
+}
+.header .search-bar input::placeholder {
+    color: var(--theme-color);
+    opacity: 0.7;
+}
+.header .search-bar i {
+    color: var(--theme-color);
+    font-size: 20px;
+}
+.header .search-bar:focus-within {
+    box-shadow: 0 0 0 2px rgba(23, 114, 109, 0.2);
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+.header .icons i {
+    margin-left: 20px;
+    font-size: 28px;
+    color: var(--theme-color);
+}
+.header .weather {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.header .weather img {
+    width: 50px;
+    height: 50px;
+}
+.header .weather .temp {
+    margin-left: 10px;
+    font-size: 24px;
+    color: var(--theme-color);
+}
+.main-content {
+    display: flex;
+    flex: 1;
+    background-color: var(--background-color);
+}
+.calendar-section {
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.calendar-section .month {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--theme-color);
+}
+.calendar-section .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.calendar-section .schedule-button, .calendar-section .create-button {
+    background-color: var(--theme-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #eae4d2;
+}
+
+button.delete-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button.delete-button:hover {
+    background-color: #c82333;
+}
+
+#calendar {
+    flex: 1;
+}
+.news-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+}
+.news-section .news-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--theme-color);
+}
+.news-section .news-item {
+    margin-bottom: 20px;
+}
+.news-section .news-item .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--theme-color);
+}
+.news-section .news-item .news-description {
+    font-size: 16px;
+    color: #333;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--theme-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #145e5a;
+}
+
+.logout-button i {
+    color: white !important;
+    margin-left: 0 !important;
+}
+
+.settings-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-color);
+    color: white;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: all 0.2s ease;
+}
+
+.settings-button:hover {
+    transform: rotate(90deg);
+    filter: brightness(90%);
+}
+
+.settings-button i {
+    color: white !important;
+    margin: 0 !important;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.schedule-button {
+  /* existing styles */
+  margin-right: 0;  /* if there was any margin-right, remove it */
+}
+
+.public-events-button {
+  padding: 8px 16px;
+  background-color: var(--theme-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.2s;
+}
+
+.public-events-button:hover {
+  filter: brightness(90%);
+}
